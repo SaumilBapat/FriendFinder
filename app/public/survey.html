@@ -39,7 +39,23 @@
         </div>
       </div>
       <div id="questions"></div>
-      <input type="submit" class="btn btn-info" value="Submit" id="submitButton">
+      <button type="button" class="btn btn-info btn-lg" value="Submit" data-toggle="modal" data-target="#myModal" id="submitButton">Submit</button>
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <h1>Your Ideal Friend</h1>
+              <span id='friendName'></span>
+              <div class="mb-3 pics animation all 2">
+                <img class="img-fluid" id="friendImage" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!--Api Javascript-->
     <script src="./javascript/logic.js"></script>

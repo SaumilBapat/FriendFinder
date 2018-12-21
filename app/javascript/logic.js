@@ -61,6 +61,7 @@ function submit() {
   }
   $.post("/api/friends", postData,
   function(data, status){
-    alert("Data: " + data + "\nStatus: " + status);
+    $('#friendName').text(data.name);
+    $('#friendImage').attr('src', data.photo);
   });
 }

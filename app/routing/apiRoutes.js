@@ -5,7 +5,8 @@ function initialize(app) {
       let name = req.body.name;
       let profilePic = req.body.profilePic;
       let answers = JSON.parse(req.body.answers);
-      let lowestScore;
+      console.log(`~~~${answers}`);
+      let lowestScore = 1000;
       let lowestIndex;
       for (var i = 0; i < friends.length; i++) {
         var friend = friends[i];
@@ -13,14 +14,14 @@ function initialize(app) {
         for (var scoreIndex = 0; scoreIndex < friend.scores.length; scoreIndex++) {
           score += Math.abs(friend.scores[scoreIndex] - answers[scoreIndex]);
         }
-        if(score < lowestScore || !lowestScore) {
+        if(score < lowestScore) {
           lowestScore = score;
           lowestIndex = i;
         }
         console.log(`~~~${friend.name} Score: ${score}`);
       }
       console.log(`Lowest Score: ${lowestIndex} & ${JSON.stringify(friends[lowestIndex])}`);
-      res.send(friends[lowestIndex]);
+      res.send(friends[0]);
   });
 }
 module.exports = initialize;
