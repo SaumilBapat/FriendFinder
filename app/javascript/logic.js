@@ -39,16 +39,15 @@ var questions = [
   "I love challenging myself",
   "I am health focused",
   "I am very driven"
-]
+];
 
 function submit() {
   event.preventDefault();
-  let userData = {answers: []};
   var answers = [];
   for (var i = 0; i < questions.length; i++) {
     var answer = '#answer' + i;
     answer = $(answer).val();
-    userData.answers.push(answer);
+    answers.push(answer);
   }
   let postData = {
     answers: answers,
