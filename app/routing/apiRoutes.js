@@ -21,7 +21,7 @@ function initialize(app) {
         console.log(`~~~${friend.name} Score: ${score}`);
       }
       console.log(`Lowest Score: ${lowestIndex} & ${JSON.stringify(friends[lowestIndex])}`);
-      res.send(friends[0]);
+      res.send(friends[lowestIndex]);
   });
 }
 module.exports = initialize;
