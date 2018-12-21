@@ -11,6 +11,14 @@ function initialize(app) {
       console.log(file);
       res.sendFile(file);
   });
+  app.get('/api/friends', function(req, res) {
+      var file = path.resolve(__dirname + '/../data/friends.json');
+      console.log(file);
+      res.sendFile(file);
+  });
   app.use(express.static('app'));
+  app.get('*',function (req, res) {
+        res.redirect('/');
+    });
 }
 module.exports = initialize;
