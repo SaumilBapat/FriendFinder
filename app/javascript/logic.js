@@ -45,8 +45,8 @@ function submit() {
   event.preventDefault();
   var answers = [];
   for (var i = 0; i < questions.length; i++) {
-    var answer = '#answer' + i;
-    answer = $(answer).val();
+    let answerDiv = '#answer' + i;
+    let answer = $(answerDiv).val();
     answers.push(answer);
   }
   let postData = {
