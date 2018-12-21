@@ -20,7 +20,7 @@ function createQuestions() {
 function createOptions() {
   var select = $('<select>');
   for (var i = 0; i<options.length; i++) {
-    select.append($('<option>').val(options[i]).text(options[i]));
+    select.append($('<option>').val(i+1).text(options[i]));
   }
   return select;
 }
@@ -38,7 +38,12 @@ var questions = [
   "I love new experiences",
   "I love challenging myself",
   "I am health focused",
-  "I am very driven"
+  "I am very driven",
+  "I love travelling",
+  "I love solving puzzles",
+  "I love playing video games",
+  "I love building things",
+  "I love going to new shows"
 ];
 
 function submit() {
