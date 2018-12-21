@@ -50,15 +50,13 @@ function submit() {
     answer = $(answer).val();
     userData.answers.push(answer);
   }
-  $.post("/api/friends",
-  {
-    name: "Donald Duck",
-    city: "Duckburg"
-  },
+  let postData = {
+    answers: answers,
+    name: $('#name').val(),
+    profilePic: $('#profilePic').val()
+  }
+  $.post("/api/friends", postData,
   function(data, status){
     alert("Data: " + data + "\nStatus: " + status);
   });
-  // $.post("/api/friends", userData, function(data) {
-  //   alert(data);
-  // });
 }
