@@ -1,3 +1,4 @@
+//This file contains the get requests logic routing
 const path = require('path');
 const express = require('express');
 function initialize(app) {

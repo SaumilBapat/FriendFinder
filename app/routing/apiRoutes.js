@@ -1,3 +1,4 @@
+//This file contains the endpoing logic for the form post
 const express = require('express');
 let friends = require('./../data/friends.json');
 function initialize(app) {
